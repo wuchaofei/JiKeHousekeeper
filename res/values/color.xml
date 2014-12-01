@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="blue_title_color">#1192CB</color>
+    <color name="black_txt_color">#FF000000</color>
+    <color name="o">#ddeeee</color>
+    <color name="o1">#ffffdd</color>
+    <color name="gray">#d5d4d4</color>
+    <color name="blue">#0000ff</color>
+    <color name="calendar_color_green">#60c677</color>
+    <color name="calendar_color_orange">#fc6c00</color>
+    <color name="calendar_color_black">#666666</color>
+    <color name="calendar_color_gray">#cccccc</color>
+    <color name="calendar_color_month_title">#526276</color>
+    <color name="calendar_color_white">#ffffff</color>
+    <color name="content_bg">#F0F0F0</color>
+    <color name="white">#Ffffff</color>
+    <color name="black">#000000</color>
+    <color name="deep_gray">#BABABA</color>
+    <color name="item_gray">#5f5f5f</color>
+    <color name="danhuise">#DCDCDC</color>
+    <color name="huise_txt_color">#9EA09F</color>
+    <color name="black6">#666666</color>
+    <color name="price_yellow">#FD8612</color>
+    <color name="price_yellow_transparent">#ccFD8612</color>
+    <color name="text_blue">#1491C5</color>
+    <color name="item_selected_gray">#EFF2F3</color>
+    <color name="light_green">#3CC43C</color>
+    <color name="light_white_bg">#F4F5F6</color>
+    <color name="red">#ff0000</color>
+    <color name="green">#238C00</color>
+    <color name="state_blue">#1192CB</color>
+    <color name="transparent">#00000000</color>
+    <color name="gold">#b89766</color>
+    <color name="select">#98aacc</color>
+    <color name="ef_gray_bg">#efefef</color>
+    <color name="skyblue">#4f849e</color>
+    <color name="GridDividGrayLine">#e3e3e3</color>
+    <color name="color_462C00">#462C00</color>
+    <color name="navpage">#FFE1E8EB</color>
+    <color name="lightgrey">#ff888888</color>
+    <color name="grey">#58616d</color>
+    <color name="darkgrey">#ff404040</color>
+    <color name="toasterro">#9fd524</color>
+    <color name="semitransparent">#80000000</color>
+    <color name="lightransparent">#a0000000</color>
+
+</resources>

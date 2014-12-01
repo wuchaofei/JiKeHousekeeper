@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_item_color_bg"
+    android:clickable="true"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp" 
+    android:paddingLeft="10dp" 
+         >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_centerVertical="true" >
+
+        <TextView
+            android:id="@+id/user_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="张海洋"
+            android:textColor="@color/black6"
+            android:textSize="16sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="2014-01-11"
+            android:textColor="@color/black6"
+            android:textSize="16sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/haoping_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_tv"
+            android:layout_marginTop="5dp"
+            android:text="好评"
+            android:textColor="@color/blue_title_color"
+            android:textSize="16sp" >
+        </TextView>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="10dp"
+        android:background="@color/deep_gray" 
+        />
+	 <TextView
+            android:id="@+id/content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:text="Android_listview设置每条信息的间距Android_listview设置每条信息的间距Android_listview设置每条信息的间距"
+            android:textColor="@color/black6"
+            android:textSize="16sp" />
+</LinearLayout>

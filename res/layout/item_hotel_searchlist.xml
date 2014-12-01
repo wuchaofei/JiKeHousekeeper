@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_item_color_bg"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+     >
+
+    <ImageView
+        android:id="@+id/hotel_pic_iv"
+        android:layout_width="93dp"
+        android:layout_height="70dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/hotelpic_loading" >
+    </ImageView>
+
+    <RelativeLayout
+        android:id="@+id/hotel_info_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:paddingBottom="5dp"
+  		android:paddingTop="5dp"
+        android:layout_toRightOf="@id/hotel_pic_iv"
+        android:gravity="left"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/hotel_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上海南泉大酒店"
+            android:singleLine="true"
+			android:ellipsize="end"
+			android:width="200dp"
+            android:textColor="#1192CB"
+            android:textSize="15sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/score_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hotel_name_tv"
+            android:layout_marginTop="3dp"
+            android:text="9.5分"
+            android:textColor="@color/price_yellow"
+            android:textSize="14sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/starlevel_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hotel_name_tv"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@id/score_tv"
+            android:text="舒适型"
+            android:textColor="@color/black6"
+            android:textSize="14sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/area_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/starlevel_tv"
+            android:layout_marginTop="3dp"
+            android:text="外滩"
+            android:textColor="@color/black6"
+            android:textSize="13sp" >
+        </TextView>
+        
+        <TextView
+            android:id="@+id/juli_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/area_tv"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@id/area_tv"
+            android:gravity="right"
+            android:layout_marginTop="5dp"
+            android:text="1200米"
+            android:textColor="@color/black6"
+            android:textSize="13sp" >
+        </TextView>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="right"
+        android:text="￥345"
+        android:textColor="@color/price_yellow"
+        android:textSize="18sp" >
+    </TextView>
+
+</RelativeLayout>

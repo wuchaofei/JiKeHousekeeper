@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFFFF" >
+
+    <RelativeLayout
+        android:id="@+id/text_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/titile_bg" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="订单支付"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" >
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back" >
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/chongzhi_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="#00000000"
+            android:text="支付完成"
+            android:textColor="#FFFFFFFF"
+            android:textSize="18sp" >
+        </TextView>
+    </RelativeLayout>
+    
+     <WebView
+        android:id="@+id/webView_zhifu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/text_bg" />
+
+  <!-- 
+   <TextView
+        android:id="@+id/yue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_bg"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#FF000000"
+        android:textSize="18sp" >
+    </TextView>
+
+    <EditText
+        android:id="@+id/chongzhi_input"
+        android:layout_width="300dp"
+        android:layout_height="37dp"
+        android:layout_below="@id/yue"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/register_input"
+        android:hint="@string/chongzhi_hint"
+        android:inputType="number"
+        android:paddingLeft="10dp"
+        android:singleLine="true" />
+
+    <Button
+        android:id="@+id/chongzhi"
+        android:layout_width="300dp"
+        android:layout_height="39dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btn_9"
+        android:text="@string/chongzhi"
+        android:textColor="#FFF0F0F0"
+        android:textSize="20sp" />
+ 	-->
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#efefef" >
+
+    <RelativeLayout
+        android:id="@+id/text_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@drawable/titile_bg" >
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="航班动态列表"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" >
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/back_imgbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back" >
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/home_imgbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="#00000000"
+            android:src="@drawable/home" >
+        </ImageButton>
+    </RelativeLayout>
+    
+    <com.jike.shanglv.Common.RefreshListView
+	        android:id="@+id/listview"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	         android:layout_below="@id/text_bg"
+      		 android:layout_centerVertical="true"
+	        android:cacheColorHint="@color/transparent"
+	        />
+
+</RelativeLayout>

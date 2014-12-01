@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FF159BE3"
+    android:gravity="top|center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <include layout="@layout/mpos_app_icon" />
+    </LinearLayout>
+    
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="正在检测支付环境。。。"
+        />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progressbar"
+        style="@android:style/Widget.ProgressBar"
+        android:layout_width="73dp"
+        android:layout_height="86dp"
+         />
+<!-- android:indeterminateDrawable="@anim/welcome" -->
+    <LinearLayout
+        android:id="@+id/login_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top|center_horizontal"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/id_input"
+            style="@style/editStyle"
+            android:layout_width="260dp"
+            android:layout_height="48dp"
+            android:hint="@string/activate_company_id"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/code_input"
+            style="@style/editStyle"
+            android:layout_width="260dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/company_skid"
+            android:inputType="textPassword"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="260dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_cannot"
+            android:clickable="false"
+            android:text="@string/ok"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <include layout="@layout/mpos_copy_rightt" />
+
+</LinearLayout>

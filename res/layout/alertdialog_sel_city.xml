@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/AlertDialogTop_Layout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/alertdialogtop_bg" >
+
+        <!-- 弹窗Title -->
+
+        <TextView
+            android:id="@+id/AlertDialogTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/skyblue"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/alertdialog_close" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/AlertDialogContent_Layout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/AlertDialogTop_Layout"
+        android:background="@drawable/alertdialog_bg" >
+
+        <RelativeLayout
+            android:id="@+id/add_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" >
+
+            <RelativeLayout
+                android:id="@+id/add_province_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/add_province_txt"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:gravity="center|right"
+                    android:hint="省  份"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/booking_item_content_textsize" />
+
+                <Spinner
+                    android:id="@+id/add_province_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/add_province_txt"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/booking_item_content_textsize" >
+                </Spinner>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/add_city_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/add_province_layout"
+                android:layout_marginTop="10dp" >
+
+                <TextView
+                    android:id="@+id/add_city_txt"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:gravity="center|right"
+                    android:hint="城  市"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/add_city_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/add_city_txt"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" >
+                </Spinner>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/AlertDialogEnd_Layout"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/AlertDialogContent_Layout"
+        android:background="@drawable/alertdialogend_bg" >
+
+        <LinearLayout
+            android:id="@+id/AlertDialogBtn_Layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            >
+
+            <LinearLayout
+                android:id="@+id/ok_btn_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                 >
+
+                <TextView
+                    android:id="@+id/ok_btn_txt"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="确定"
+                    android:textColor="@color/black6"
+                    android:textSize="@dimen/booking_item_content_textsize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cancle_btn_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 >
+
+                <TextView
+                    android:id="@+id/cancle_btn_txt"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="取消"
+                    android:textColor="@color/black6"
+                    android:textSize="@dimen/booking_item_content_textsize" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

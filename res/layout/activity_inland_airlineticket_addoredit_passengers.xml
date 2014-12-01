@@ -1,0 +1,331 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFFFF"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/text_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@drawable/titile_bg" >
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="编辑"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/cancel_tv"
+            android:layout_width="70dp"
+            android:layout_height="@dimen/title_height"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="取消"
+            android:textSize="18sp" 
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/finish_tv"
+            android:layout_width="70dp"
+            android:layout_height="@dimen/title_height"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="#00000000"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:text="完成">
+        </TextView>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/text_bg"
+        android:layout_marginBottom="61dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#FFFFFFFF"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/add_passager_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/list_item_color_bg"
+                android:gravity="center_vertical"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="乘客类型"
+                    android:textColor="@color/black6"
+                    android:textSize="@dimen/booking_item_content_textsize" />
+
+                <TextView
+                    android:id="@+id/passengerType_tv"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="40dp"
+                    android:gravity="right"
+                    android:text="成人"
+                    android:textColor="@color/blue_title_color"
+                    android:textSize="@dimen/booking_item_content_textsize" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/rightsmallarrow" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="15dp"
+                android:background="@color/deep_gray" />
+
+            <!-- 获取从手机通讯录获取联系人姓名电话 -->
+
+            <RelativeLayout
+                android:id="@+id/add_contact_person_phone_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/list_item_color_bg"
+                android:gravity="center_vertical"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="乘客姓名"
+                    android:textColor="@color/black6"
+                    android:textSize="@dimen/booking_item_content_textsize" />
+
+                <com.jike.shanglv.Common.ClearEditText
+                    android:id="@+id/passengerName_et"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="40dp"
+                    android:maxLength="15"
+                    android:background="@null"
+                    android:drawableRight="@drawable/delete_selector"
+                    android:hint="请输入乘客姓名"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/booking_item_content_textsize" />
+
+                <ImageButton
+                    android:id="@+id/lianxiren_icon_imgbtn"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/explanation_icon" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="15dp"
+                android:background="@color/deep_gray" />
+
+            <RelativeLayout
+                android:id="@+id/baoxian_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/list_item_color_bg"
+                android:gravity="center_vertical"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="证件类型"
+                    android:textColor="@color/black6"
+                    android:textSize="@dimen/booking_item_content_textsize" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/rightsmallarrow" />
+
+                <TextView
+                    android:id="@+id/identificationType_tv"
+                    android:layout_width="150dp"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="40dp"
+                    android:gravity="right"
+                    android:text="身份证"
+                    android:textColor="@color/blue_title_color"
+                    android:textSize="@dimen/booking_item_content_textsize" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="15dp"
+                android:background="@color/deep_gray" />
+
+            <RelativeLayout
+                android:id="@+id/baoxiaopingzheng_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/list_item_color_bg"
+                android:gravity="center_vertical"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="证件号码"
+                    android:textColor="@color/black6"
+                    android:textSize="@dimen/booking_item_content_textsize" />
+
+                <com.jike.shanglv.Common.ClearEditText
+                    android:id="@+id/identificationNum_et"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="40dp"
+                    android:maxLength="18"
+                    android:background="@null"
+                    android:drawableRight="@drawable/delete_selector"
+                    android:hint="请输入证件号码"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColor="@color/blue_title_color"
+                    android:textSize="@dimen/booking_item_content_textsize" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/rightsmallarrow" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="15dp"
+                android:background="@color/deep_gray" />
+            
+            <RelativeLayout
+                android:id="@+id/lianxidianhua_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/list_item_color_bg"
+                android:gravity="center_vertical"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="联系电话"
+                    android:textColor="@color/black6"
+                    android:textSize="@dimen/booking_item_content_textsize" />
+
+                <com.jike.shanglv.Common.ClearEditText
+                    android:id="@+id/phoneNum_et"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="40dp"
+                    android:background="@null"
+                    android:drawableRight="@drawable/delete_selector"
+                    android:gravity="right"
+                    android:inputType="phone"
+                    android:hint="请输入联系电话(选填)"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    android:textColor="@color/blue_title_color"
+                    android:textSize="@dimen/booking_item_content_textsize" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/rightsmallarrow" />
+            </RelativeLayout>
+            
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/deep_gray" />
+              
+            
+            
+
+        <RelativeLayout
+            android:id="@+id/savecontact_rl"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="40dp" >
+
+            <ImageView
+                android:id="@+id/savecontact_checkbox_iv"
+                android:layout_width="22dp"
+                android:layout_height="23dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/fuxuankuang_yes" >
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/savecontact_checkbox_iv"
+                android:text="保存为常用联系人"
+                android:textColor="#565656"
+                android:textSize="16sp" >
+            </TextView>
+        </RelativeLayout>
+
+            
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

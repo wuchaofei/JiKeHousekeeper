@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#efefef"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/top_title_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/titile_bg" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="酒店介绍"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" >
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/back_imgbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back" >
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/home_imgbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="#00000000"
+            android:src="@drawable/home" >
+        </ImageButton>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="酒店介绍"
+                android:textColor="@color/black"
+                android:textSize="18sp" >
+            </TextView>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/deep_gray" />
+
+            <TextView
+                android:id="@+id/hotel_introduce_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                 android:paddingTop="5dp"
+                 android:paddingBottom="5dp"
+                android:text="上海紫金东悦酒店——原（上海乐久大酒店）位于上海市中心区域，地处共和新路、永兴路口，毗邻南北高架和内环高架，紧靠上海火车站，风景区外滩，交通十分便利。
+　　上海乐久大酒店客房装潢典雅别致，风格迥异，令您置身于温馨、舒适的环境中。酒店厨师力量雄厚，着重海派菜"
+                android:textColor="@color/black6"
+                android:textSize="16sp" >
+            </TextView>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/deep_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="酒店服务"
+                android:textColor="@color/black"
+                android:textSize="18sp" >
+            </TextView>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/deep_gray" />
+
+            <TextView
+                android:id="@+id/hotel_sheshi_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                 android:paddingTop="5dp"
+                 android:paddingBottom="5dp"
+                android:text="大床、双床、上网、含早、停车场、刷卡"
+                android:textColor="@color/black6"
+                android:textSize="16sp" >
+            </TextView>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/deep_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="酒店交通"
+                android:textColor="@color/black"
+                android:textSize="18sp" >
+            </TextView>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/deep_gray" />
+
+            <TextView
+                android:id="@+id/hotel_traffic_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                 android:paddingTop="5dp"
+                 android:paddingBottom="5dp"
+                android:text="距离上海虹桥机场：15公里    
+距离上海浦东国际机场：50公里 
+距离上海火车站：1.5 公里"
+                android:textColor="@color/black6"
+                android:textSize="16sp" >
+            </TextView>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/deep_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="酒店地址"
+                android:textColor="@color/black"
+                android:textSize="18sp" >
+            </TextView>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/deep_gray" />
+
+            <TextView
+                android:id="@+id/hotel_address_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                 android:paddingBottom="5dp"
+                android:text="上海市闸北区永兴路669号（近共和新路）"
+                android:textColor="@color/black6"
+                android:textSize="16sp" >
+            </TextView>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/deep_gray"
+                android:layout_marginBottom="15dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

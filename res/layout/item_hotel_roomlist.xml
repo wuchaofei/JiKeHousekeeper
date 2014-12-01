@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:background="@drawable/list_item_color_bg"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" >
+
+            <TextView
+                android:id="@+id/room_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="高级双床房"
+                android:textColor="@color/black_txt_color"
+                android:textSize="16sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/room_area_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/room_title_tv"
+                android:layout_marginTop="5dp"
+                android:text="30平米"
+                android:textColor="@color/black6"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/remark_tv"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/room_title_tv"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/room_area_tv"
+                android:text="不含早(特别促销)"
+                android:textColor="@color/black6"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/AvailableAmount_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/remark_tv"
+                android:layout_marginTop="5dp"
+                android:text="有房"
+                android:textColor="@color/price_yellow"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_roomtype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/remark_tv"
+                android:layout_toRightOf="@+id/AvailableAmount_tv"
+                android:layout_alignTop="@+id/AvailableAmount_tv"
+                android:layout_marginLeft="10sp"
+                android:textColor="@color/price_yellow"
+                android:text="现付" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="105dp"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/price_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥600"
+                android:textColor="@color/price_yellow"
+                android:textSize="17sp" />
+
+            <RelativeLayout
+                android:id="@+id/fanMoney_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/price_tv"
+                android:gravity="center"
+                 >
+
+                <ImageView
+                    android:id="@+id/fan_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/icon_flight_fan" />
+
+                <TextView
+                    android:id="@+id/fanMoney_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/fan_iv"
+                    android:text="￥20"
+                    android:textColor="#FD8F23"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/yufujia_tv"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/price_tv"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/corners_bg_yufujia"
+                android:text="预付价"
+                android:textColor="#ffffff"
+                android:textSize="11sp" />
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/booking_imgbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/booking_button" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rightsmallarrow" >
+        </ImageView>
+    </RelativeLayout>
+
+</LinearLayout>

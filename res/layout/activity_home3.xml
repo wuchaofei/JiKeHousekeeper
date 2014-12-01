@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/title_bg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/menu_top"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/menu_logo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/menu_logo" >
+                </ImageView>
+            </RelativeLayout>
+
+            <include layout="@layout/ad_pagerview" 
+                android:id="@+id/ad_include"/>
+
+            <LinearLayout
+                android:id="@+id/LL_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                 >
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/GridDividGrayLine" />
+
+                <com.jike.shanglv.Common.MyGridView
+                    android:id="@+id/grid"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/GridDividGrayLine"
+                    android:columnWidth="106dp"
+                    android:horizontalSpacing="1.0px"
+                    android:listSelector="@null"
+                    android:numColumns="3"
+                    android:smoothScrollbar="true"
+                    android:soundEffectsEnabled="true"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="1.0px" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/GridDividGrayLine" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

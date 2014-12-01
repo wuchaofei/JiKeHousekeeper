@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jike.shanglv"
+    android:installLocation="auto"
+    android:versionCode="9"
+    android:versionName="7.0.1" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
+
+        <!--
+            E:\android.keystore 
+       	SHA1:0D:3C:EC:2E:C2:01:A0:E6:C7:AE:44:B4:05:17:9D:F8:BE:A9:70:9E 	com.jike.shanglv
+       	Z2Uy1ULMdZQviUdWKE0xpbmh
+        -->
+        <!--
+            E:\android_menghang.keystore 
+       	SHA1:13:3A:9B:D6:DC:D6:9E:62:8C:66:2D:19:9B:25:08:AC:50:06:ED:CC 	com.jike.shanglv
+       	rcdgewqnqHIKRl4jWEmSSPfb
+        -->
+        <!-- debug测试 lvgLGpq6ptCLwjGhWCAZ1rbQ -->
+        <!--
+                com.jike.shanglv_b		E:\android.keystore
+       		EtUImVWGAm6DrsRAGQXKsf10
+        -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="EtUImVWGAm6DrsRAGQXKsf10" />
+        <!-- 自动更新Library中用到的 -->
+        <service
+            android:name="com.loveplusplus.update.DownloadService"
+            android:exported="true" />
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:permission="android.permission.BAIDU_LOCATION_SERVICE"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.4" />
+            </intent-filter>
+        </service>
+        <!-- 欢迎页 -->
+        <activity
+            android:name="com.jike.shanglv.WelcomeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 商旅助手菜单页面 -->
+        <activity
+            android:name=".ActivityBMenu"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 商旅助手菜单页面NEW   原来的系统找不到，故新建此页 -->
+        <activity
+            android:name=".ActivityBMenuNew"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 引导页 -->
+        <activity
+            android:name=".GuideActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.jike.shanglv.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 日历选择 -->
+        <activity
+            android:name=".ShipCalendar.MainActivity_bak"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- new日历选择 -->
+        <activity
+            android:name=".ShipCalendar.MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 国内机票城市选择 -->
+        <activity
+            android:name="com.jike.shanglv.SeclectCity.AirportCityActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <!-- 国际机票城市选择 -->
+        <activity
+            android:name="com.jike.shanglv.SeclectCity.AirportInternationalCityActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <!-- 酒店城市选择 -->
+        <activity
+            android:name="com.jike.shanglv.SeclectCity.HotelCityActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <!-- 火车票城市选择 -->
+        <activity
+            android:name="com.jike.shanglv.SeclectCity.TrainCityActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+
+        <!-- “首頁”菜单页面 -->
+        <activity
+            android:name=".HomeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- “首頁”菜单页面NEW 管家和助手合并后显示的首页 -->
+        <activity
+            android:name=".HomeActivityNew"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- “订单”菜单页面 -->
+        <activity
+            android:name=".OrderActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- “我的”菜单页面 -->
+        <activity
+            android:name=".MineActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 我的账户 -->
+        <activity
+            android:name=".ActivityMyAccout"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 修改密码 -->
+        <activity
+            android:name=".ActivityChangePsw"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 修改支付密码：获取验证码 -->
+        <activity
+            android:name=".ActivityConfirmInfoBeforeFindZfpsw"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 重置支付密码 -->
+        <activity
+            android:name=".ActivityResetZfPsw"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- “更多”菜单页面 -->
+        <activity
+            android:name=".MoreActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- webview加载页 -->
+        <activity
+            android:name=".Activity_Web_Frame"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- “国内机票”菜单页面 -->
+        <activity
+            android:name=".ActivityInlandAirlineticket"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- “国内机票搜索列表”页面 -->
+        <activity
+            android:name=".ActivityInlandAirlineticketSearchlist"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 国内机票舱位选择 -->
+        <activity
+            android:name=".ActivityInlandAirlineticketSelectCabin"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 国内机票预定 -->
+        <activity
+            android:name=".ActivityInlandAirlineticketBooking"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 政策选择 -->
+        <activity
+            android:name=".SelectZhengceActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 国际机票订单详情 -->
+        <activity
+            android:name=".ActivityInternationalAirlineticketOrderDetail"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 国内机选择登记人 -->
+        <activity
+            android:name=".ActivityInlandAirlineticketSelectPassengers"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 国内机添加or编辑登记人 -->
+        <activity
+            android:name=".ActivityInlandAirlineticketAddoreditPassengers"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 国内机票订单详情 -->
+        <activity
+            android:name=".ActivityInlandAirlineticketOrderDetail"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- web支付 -->
+        <activity
+            android:name=".Activity_Web_Pay"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 国际机票搜索 -->
+        <activity
+            android:name=".ActivityInternationalAirlineticket"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 国际机票需求单 -->
+        <activity
+            android:name=".ActivityInternationalRequisitionForm"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 国际机票需求单填写成功 -->
+        <activity
+            android:name=".ActivityInternationalRequisitionSuccess"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 航班动态 -->
+        <activity
+            android:name=".ActivityHangbandongtai"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 航班动态列表 -->
+        <activity
+            android:name=".ActivityHangbandongtaiSearchlist"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 航班动态详情 -->
+        <activity
+            android:name=".ActivityHangbandongtaiDetail"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 酒店 -->
+        <activity
+            android:name=".ActivityHotel"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 酒店搜索列表 -->
+        <activity
+            android:name=".ActivityHotelSearchlist"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 酒店筛选 -->
+        <activity
+            android:name=".ActivityHotelFilter"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 酒店详情 -->
+        <activity
+            android:name=".ActivityHotelDetail"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 酒店介绍 -->
+        <activity
+            android:name=".ActivityHotelIntroduce"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 酒店评论 -->
+        <activity
+            android:name=".ActivityHotelComments"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 酒店位置 -->
+        <activity
+            android:name=".ActivityHotelLocation"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 酒店订单填写 -->
+        <activity
+            android:name=".ActivityHotelBooking"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 酒店订单详情 -->
+        <activity
+            android:name=".ActivityHotelOrderDetail"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 登录 -->
+        <activity
+            android:name=".Activity_Login"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 话费充值 -->
+        <activity
+            android:name=".ActivityHuafeichongzhi"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 通讯录选择 -->
+        <activity
+            android:name="com.jike.shanglv.SeclectCity.ContactListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <!-- 账户充值 -->
+        <activity
+            android:name=".ActivityZhanghuchongzhi"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 注册 -->
+        <activity
+            android:name=".Activity_Register"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 找回密码 -->
+        <activity
+            android:name=".Activity_RetrievePassword"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 火车票查询界面 -->
+        <activity
+            android:name=".ActivityTrain"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 火车票订单 -->
+        <activity
+            android:name=".ActivityTrainBooking"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 火车票列表 -->
+        <activity
+            android:name=".ActivityTrainSearchlist"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 火车票保险 -->
+        <activity
+            android:name=".ActivityTrainBaoxian"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 订单列表 -->
+        <activity
+            android:name=".ActivityOrderList"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 火车票订单详情 -->
+        <activity
+            android:name=".ActivityTrainOrderDetail"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 客户管理 -->
+        <activity
+            android:name=".ActivityClientManage"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <!-- 客户级别设置 -->
+        <activity
+            android:name=".ActivityClientManageSetGrad"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 增加修改客户 -->
+        <activity
+            android:name=".ActivityClientManageAddoredit"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <!-- 景点门票 -->
+        <activity
+            android:name=".Activity_Scenery"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 支付方式 -->
+        <activity
+            android:name=".Activity_Payway"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 超级收款 -->
+        <activity
+            android:name="com.jike.shanglv.pos.jike.mpos.newversion.MopsWelcomeActivity"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:screenOrientation="nosensor"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.jike.shanglv.pos.jike.mpos.newversion.ActivateActivity"
+            android:screenOrientation="nosensor"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.jike.shanglv.pos.jike.mpos.newversion.MainActivity"
+            android:screenOrientation="nosensor"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.jike.shanglv.ActivityTrainStop"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <!-- 微信 -->
+       <activity
+            android:name=".weixin.PayActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wxd930ea5d5a258f4f" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"/>
+    </application>
+
+</manifest>

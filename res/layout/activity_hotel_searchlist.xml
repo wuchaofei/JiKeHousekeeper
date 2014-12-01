@@ -1,0 +1,197 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFFFF" >
+
+    <RelativeLayout
+        android:id="@+id/text_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@drawable/titile_bg" >
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="酒店列表"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" >
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/back_imgbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back" >
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/list_map_tv"
+            android:layout_width="70dp"
+            android:layout_height="@dimen/title_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center|right"
+            android:layout_marginRight="10dp"
+            android:paddingRight="5dp"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:text="地图" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/bottom_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/serchtype_bg_reverse" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/byprice_LL"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/sort_price_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#F5F5F5"
+                    android:text="价格"
+                    android:textColor="@color/text_blue_select"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/sort_arrow_price_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/sort_arrow_down" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/shaixuan_LL"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/shaixuan_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#F5F5F5"
+                    android:text="筛选"
+                    android:textColor="@color/text_blue_select"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/shaixuan_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/hotel_sx" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pingfen_LL"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/sort_pingfen_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#F5F5F5"
+                    android:text="评分"
+                    android:textColor="@color/text_blue_select"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/sort_arrow_pingfen_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/sort_arrow_down" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bystarlevel_ll"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/sort_starlevel_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#F5F5F5"
+                    android:text="星级"
+                    android:textColor="@color/text_blue_select"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/sort_arrow_starlevel_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/sort_arrow_up" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.jike.shanglv.Common.RefreshListView
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/text_bg"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="39dp" 
+        android:cacheColorHint="@color/transparent"
+        />
+    <!--    -->
+    <com.baidu.mapapi.map.MapView  
+	    android:id="@+id/bmapView"  
+	    android:visibility="invisible"
+	    android:layout_below="@id/text_bg"
+	    android:layout_width="fill_parent"  
+	    android:layout_height="fill_parent"  
+	    android:clickable="true" />
+   
+    <TextView
+         android:id="@+id/my_address_tv"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:background="#ccefefef"
+         android:layout_below="@id/text_bg"
+         android:gravity="center"
+         android:padding="3dp"
+         android:text="您的位置  上海市闸北区沪太路332号"
+         android:textColor="@color/text_blue_select"
+         android:textSize="14sp" />
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/seat_rl"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/seat_grad_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="二等座"
+        android:textColor="@color/black"
+        android:textSize="@dimen/booking_item_content_textsize" />
+
+    <TextView
+        android:id="@+id/ticket_price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/seat_grad_tv"
+        android:text="￥966"
+        android:textColor="@color/price_yellow"
+        android:textSize="@dimen/booking_item_title_textsize" />
+
+    <TextView
+        android:id="@+id/remain_count_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/ticket_price_tv"
+        android:text="余票 40张"
+        android:textColor="@color/black6"
+        android:textSize="@dimen/booking_item_content_textsize" />
+<View 
+     android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_weight="1"
+    />
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/radio_clk"
+        android:paddingRight="5dp" />
+
+</LinearLayout>

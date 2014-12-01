@@ -1,0 +1,506 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#efefef"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/text_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@drawable/titile_bg" >
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="添加客户"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/cancel_tv"
+            android:layout_width="70dp"
+            android:layout_height="@dimen/title_height"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/finish_tv"
+            android:layout_width="70dp"
+            android:layout_height="@dimen/title_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="#00000000"
+            android:gravity="center"
+            android:text="完成"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" >
+        </TextView>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/text_bg"
+        android:layout_marginBottom="61dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFFFF"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/list_item_color_bg"
+                    android:gravity="center_vertical"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="用户名"
+                        android:textColor="@color/black6"
+                        android:textSize="@dimen/booking_item_content_textsize" />
+
+                    <EditText
+                        android:id="@+id/username_et"
+                        android:layout_width="200dp"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入用户名"
+                        android:maxLength="12"
+                        android:paddingRight="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/booking_item_content_textsize" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/deep_gray" />
+
+                <LinearLayout
+                    android:id="@+id/password_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/list_item_color_bg"
+                        android:gravity="center_vertical"
+                        android:padding="10dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:text="登录密码"
+                            android:textColor="@color/black6"
+                            android:textSize="@dimen/booking_item_content_textsize" />
+
+                        <com.jike.shanglv.Common.ClearEditText
+                            android:id="@+id/password_et"
+                            android:layout_width="200dp"
+                            android:layout_height="fill_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@null"
+                            android:drawableRight="@drawable/delete_selector"
+                            android:gravity="right|center_vertical"
+                            android:hint="请输入登录密码"
+                            android:maxLength="16"
+                            android:paddingRight="10dp"
+                            android:password="true"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/booking_item_content_textsize" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="15dp"
+                        android:background="@color/deep_gray" />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/list_item_color_bg"
+                        android:gravity="center_vertical"
+                        android:padding="10dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:text="确认密码"
+                            android:textColor="@color/black6"
+                            android:textSize="@dimen/booking_item_content_textsize" />
+
+                        <com.jike.shanglv.Common.ClearEditText
+                            android:id="@+id/comfirmPassword_et"
+                            android:layout_width="200dp"
+                            android:layout_height="fill_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@null"
+                            android:drawableRight="@drawable/delete_selector"
+                            android:gravity="right|center_vertical"
+                            android:hint="请再次输入密码"
+                            android:maxLength="16"
+                            android:paddingRight="10dp"
+                            android:password="true"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/booking_item_content_textsize" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="15dp"
+                        android:background="@color/deep_gray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/setgrad_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/list_item_color_bg"
+                        android:gravity="center_vertical"
+                        android:padding="10dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center"
+                            android:text="设置级别"
+                            android:textColor="@color/black6"
+                            android:textSize="@dimen/booking_item_content_textsize" />
+
+                        <TextView
+                            android:id="@+id/default_grad_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:text=""
+                            android:textColor="@color/blue_title_color"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/rightsmallarrow" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="15dp"
+                        android:background="@color/deep_gray" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/list_item_color_bg"
+                    android:gravity="center_vertical"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="联系人姓名"
+                        android:textColor="@color/black6"
+                        android:textSize="@dimen/booking_item_content_textsize" />
+
+                    <com.jike.shanglv.Common.ClearEditText
+                        android:id="@+id/contactPerson_et"
+                        android:layout_width="200dp"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:drawableRight="@drawable/delete_selector"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入联系人姓名"
+                        android:maxLength="10"
+                        android:paddingRight="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/booking_item_content_textsize" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/deep_gray" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/list_item_color_bg"
+                    android:gravity="center_vertical"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="联系人手机号"
+                        android:textColor="@color/black6"
+                        android:textSize="@dimen/booking_item_content_textsize" />
+
+                    <com.jike.shanglv.Common.ClearEditText
+                        android:id="@+id/contactPhone_et"
+                        android:layout_width="200dp"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入联系人电话"
+                        android:maxLength="11"
+                        android:paddingRight="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/booking_item_content_textsize" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/deep_gray" />
+
+                <RelativeLayout
+                    android:id="@+id/lianxidianhua_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/list_item_color_bg"
+                    android:gravity="center_vertical"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="用户所在城市"
+                        android:textColor="@color/black6"
+                        android:textSize="@dimen/booking_item_content_textsize" />
+
+                    <TextView
+                        android:id="@+id/province_city_tv"
+                        android:layout_width="150dp"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="right|center_vertical"
+                        android:hint="--请选择城市--"
+                        android:maxLength="11"
+                        android:singleLine="true"
+                        android:textColor="@color/blue_title_color"
+                        android:textSize="@dimen/booking_item_content_textsize" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/rightsmallarrow" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/deep_gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dealer_extra_info_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#FFFFFFFF"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/deep_gray" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:layout_alignBottom="@+id/scrollView1"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/list_item_color_bg"
+                    android:gravity="center_vertical"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="公司名"
+                        android:textColor="@color/black6"
+                        android:textSize="@dimen/booking_item_content_textsize" />
+
+                    <com.jike.shanglv.Common.ClearEditText
+                        android:id="@+id/companyName_et"
+                        android:layout_width="200dp"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:drawableRight="@drawable/delete_selector"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入公司名"
+                        android:maxLength="15"
+                        android:paddingRight="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/booking_item_content_textsize" />
+
+                        
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/deep_gray" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/list_item_color_bg"
+                    android:gravity="center_vertical"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="账户有效期开始"
+                        android:textColor="@color/black6"
+                        android:textSize="@dimen/booking_item_content_textsize" />
+
+                    <TextView
+                        android:id="@+id/startValidDay_tv"
+                        android:layout_width="150dp"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="right|center_vertical"
+                        android:hint="--请选择开始日期--"
+                        android:maxLength="11"
+                        android:singleLine="true"
+                        android:textColor="@color/blue_title_color"
+                        android:textSize="@dimen/booking_item_content_textsize" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/rightsmallarrow" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/deep_gray" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/list_item_color_bg"
+                    android:gravity="center_vertical"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="账户有效期结束"
+                        android:textColor="@color/black6"
+                        android:textSize="@dimen/booking_item_content_textsize" />
+
+                    <TextView
+                        android:id="@+id/endValidDay_tv"
+                        android:layout_width="150dp"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="right|center_vertical"
+                        android:hint="--请选择结束日期--"
+                        android:maxLength="11"
+                        android:singleLine="true"
+                        android:textColor="@color/blue_title_color"
+                        android:textSize="@dimen/booking_item_content_textsize" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/rightsmallarrow" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/deep_gray" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

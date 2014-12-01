@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/top_title_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/titile_bg" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="请选择政策"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/back_imgbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back" >
+        </ImageButton>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/line_type_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/top_title_rl"
+        android:background="@drawable/serchtype_bg"
+        android:gravity="bottom"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:gravity="bottom"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/singleline_tv"
+                android:layout_width="160dp"
+                android:layout_height="36dp"
+                android:gravity="center"
+                android:text="普通政策"
+                android:textColor="@color/blue_title_color"
+                android:textSize="18sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/doubleline_tv"
+                android:layout_width="160dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="高返政策"
+                android:textColor="@color/black_txt_color"
+                android:textSize="18sp" >
+            </TextView>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/scrollbar_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_type_ll"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/typeline" >
+        </ImageView>
+    </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/special_policy_status_tv"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="温馨提示:特殊高返政策不保证100%出票，出票时间较长，不能打印行程单，紧急航班慎选。"
+            android:textColor="@color/red"
+            android:textSize="14sp" />
+
+        <com.jike.shanglv.slideexpandlistview.ActionSlideExpandableListView
+            android:id="@+id/policy_lv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center" />
+
+
+</LinearLayout>

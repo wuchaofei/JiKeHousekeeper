@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#efefef"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/top_title_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/titile_bg" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="酒店详情"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" >
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/back_imgbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back" >
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/home_imgbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="#00000000"
+            android:src="@drawable/home" >
+        </ImageButton>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp" >
+
+                <TextView
+                    android:id="@+id/hotel_name_tv"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/black6"
+                    android:textSize="18sp" >
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/hotel_pic_iv"
+                    android:layout_width="110dp"
+                    android:layout_height="82dp"
+                    android:layout_below="@id/hotel_name_tv"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:src="@drawable/hotelpic_loading" >
+                </ImageView>
+
+                <RelativeLayout
+                    android:id="@+id/pinglun_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/hotel_name_tv"
+                    android:layout_toRightOf="@id/hotel_pic_iv"
+                    android:background="@drawable/list_item_color_bg"
+                    android:clickable="true" >
+
+                    <LinearLayout
+                        android:id="@+id/haoping_ll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/score_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center"
+                            android:textColor="@color/black6"
+                            android:textSize="16sp" >
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/dianping_cout_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center"
+                            android:textColor="@color/black6"
+                            android:textSize="16sp" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/line_ll"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/haoping_ll"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp" >
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1px"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@color/deep_gray" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/rightsmallarrow" >
+                        </ImageView>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/pinglun_yulan_tv"
+                        android:layout_width="192dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line_ll"
+                        android:layout_marginLeft="15dp"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black6"
+                        android:textSize="14sp" >
+                    </TextView>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/deep_gray" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="15dp"
+                android:background="@color/deep_gray" />
+
+            <LinearLayout
+                android:id="@+id/hotel_info_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="vertical"
+                android:paddingLeft="10dp" >
+
+                <RelativeLayout
+                    android:id="@+id/adress_map_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/list_item_color_bg"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:paddingRight="15dp" >
+
+                    <ImageView
+                        android:id="@+id/city_wz_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/hotel_address" >
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/hotel_adress_tv"
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/city_wz_iv"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="@color/black6"
+                        android:textSize="16sp" >
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/arrow_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/rightsmallarrow" >
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/endcity_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_toLeftOf="@id/arrow_iv"
+                        android:gravity="center"
+                        android:text="查看地图"
+                        android:textColor="#1192CB"
+                        android:textSize="16sp" >
+                    </TextView>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/deep_gray" />
+
+                <RelativeLayout
+                    android:id="@+id/hotel_js_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:background="@drawable/list_item_color_bg"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:paddingRight="15dp" >
+
+                    <ImageView
+                        android:id="@+id/hotel_js_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/hotel_city" >
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/hotel_js_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/hotel_js_iv"
+                        android:textColor="@color/black6"
+                        android:textSize="16sp" >
+                    </TextView>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/rightsmallarrow" >
+                    </ImageView>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/deep_gray" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingRight="15dp" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/hotel_date" >
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/ruzhu_date_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center"
+                        android:text="入住时间："
+                        android:textColor="@color/black6"
+                        android:textSize="16sp" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/lidian_date_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:text="离店时间："
+                        android:textColor="@color/black6"
+                        android:textSize="16sp" >
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/deep_gray" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="15dp"
+                android:background="@color/deep_gray" />
+
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false" >
+            </ListView>
+
+            <LinearLayout
+                android:id="@+id/loading_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/frame_ani_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="正在查询酒店房型，请稍候。。。"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/no_rooms_status"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="该酒店在此期间暂无可售房型或已经满房"
+                android:textSize="15dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

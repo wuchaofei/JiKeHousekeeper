@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="10dp" >
+
+    <RelativeLayout
+        android:id="@id/expandable_toggle_item"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/policy_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="政策1"
+            android:textColor="#589719"
+            android:textSize="@dimen/booking_item_content_textsize" />
+
+        <TextView
+            android:id="@+id/fandian_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:text="7.50%"
+            android:textColor="@color/blue_title_color"
+            android:textSize="@dimen/booking_item_content_textsize" />
+
+        <TextView
+            android:id="@+id/time_section_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="115dp"
+            android:text="8:00-20:00"
+            android:textColor="@color/black6"
+            android:textSize="@dimen/booking_item_content_textsize" />
+
+        <TextView
+            android:id="@+id/price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp"
+            android:text="￥568"
+            android:textColor="@color/price_yellow"
+            android:textSize="@dimen/booking_item_content_textsize" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rightsmallarrow" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/expandable"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <View
+            android:id="@+id/top_line"
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/deep_gray" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <Button
+                android:id="@+id/select_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/select_policy_btn_img" />
+
+            <TextView
+                android:id="@+id/shuoming_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/select_btn"
+                android:gravity="left|center_vertical"
+                android:padding="5dp"
+                android:text="电子客票请不要做RR，否则可能无法出票电子客票请不要做RR，否则可能无法出票电子客票请不要做RR，否则可能无法出票电子客票请不要做RR，否则可能无法出票电子客票请不要做RR，否则可能无法出票电子客票请不要做RR，否则可能无法出票电子客票请不要做RR，否则可能无法出票电子客票请不要做RR，否则可能无法出票电子客票请不要做RR，否则可能无法出票"
+                android:textColor="@color/black6"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

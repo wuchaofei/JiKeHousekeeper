@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#efefef" >
+
+    <RelativeLayout
+        android:id="@+id/top_title_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/titile_bg" >
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="购买保险"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" >
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/back_imgbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back" >
+        </ImageButton>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/top_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/top_title_rl"
+        android:layout_marginTop="15dp"
+        android:background="@color/deep_gray" />
+
+    <ListView
+        android:id="@+id/baoxian_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_title_rl" >
+    </ListView>
+
+    <LinearLayout
+         android:id="@+id/baoxian_shuoming_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/baoxian_listview"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/baoxian_shuoming_tv"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical|right"
+            android:paddingRight="10dp"
+            android:text="保险说明"
+            android:textColor="@color/blue_title_color"
+            android:textSize="20sp" />
+        
+        <ImageView 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/rightsmallarrow"/>
+    </LinearLayout>
+    
+   <TextView
+            android:id="@+id/shuoming_content_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/top_line"
+            android:gravity="center_vertical|left"
+            android:padding="10dp"
+            android:text="    1.保险名称：康泰人寿的“e路康泰”旅客综合交通意外伤害保险、中国人寿的“携程畅行卡”旅客综合交通意外伤害保险、太平洋寿险的“随行太保”交通工具意外伤害保险、新华保险的“出行关爱”\r\n    2.分数限制：18周岁（含）以上限5份，18周岁以下限1份；\r\n    3.保险有效期：隔日航班在乘机日0点起生效，7天内有效；当日航班起飞前30分钟起生效，7天内有效；\r\n    5.保额：飞机意外伤害保险：50万元；火车、轮船、地铁、轻轨列车意外伤害保险10万元；市内公共汽车/电车、长途公汽、出租车意外伤害保险2万元；\r\n    5.售出可退（乘机日之前）；\r\n    6.年龄：凡零周岁（出生满30天）以上"
+            android:textColor="@color/blue_title_color"
+            android:textSize="18sp" 
+            android:visibility="gone"/>
+
+</RelativeLayout>

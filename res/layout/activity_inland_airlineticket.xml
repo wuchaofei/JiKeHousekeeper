@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFFFF" >
+
+    <RelativeLayout
+        android:id="@+id/top_title_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/titile_bg" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="国内机票"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" >
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/back_imgbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back" >
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/home_imgbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="#00000000"
+            android:src="@drawable/home" >
+        </ImageButton>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/line_type_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/top_title_rl"
+        android:background="@drawable/serchtype_bg"
+        android:gravity="bottom"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:gravity="bottom"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/singleline_tv"
+                android:layout_width="160dp"
+                android:layout_height="36dp"
+                android:gravity="center"
+                android:text="单程"
+                android:textColor="@color/blue_title_color"
+                android:textSize="18sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/doubleline_tv"
+                android:layout_width="160dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="往返"
+                android:textColor="@color/black_txt_color"
+                android:textSize="18sp" >
+            </TextView>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/scrollbar_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_type_ll"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/typeline" >
+        </ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/city_txt_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_type_ll"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/startcity"
+            android:textColor="#FF7F7F7F"
+            android:textSize="17sp" >
+        </TextView>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/endcity"
+            android:textColor="#FF7F7F7F"
+            android:textSize="17sp" >
+        </TextView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/city_choose_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/city_txt_ll"
+        android:layout_marginLeft="@dimen/button_margin"
+        android:layout_marginRight="@dimen/button_margin" >
+
+        <ImageView
+            android:id="@+id/swith_city_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/qiehuan_icon"
+            android:contentDescription="switch" >
+        </ImageView>
+        
+        <LinearLayout
+            android:id="@+id/startcity_choose_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+             android:layout_toLeftOf="@id/swith_city_iv"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/flight_takeoff"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:gravity="center"
+                android:src="@drawable/flight_takeoff_icon" >
+            </ImageView>
+
+            <TextView
+                android:id="@+id/startcity_tv"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="北京"
+                android:textColor="#FF363636"
+                android:textSize="22sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/startcity_code_tv"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="BJS"
+                android:textColor="#FFFFFF"
+                android:visibility="gone" >
+            </TextView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:src="@drawable/rightsmallarrow" >
+            </ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/endcity_choose_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/swith_city_iv"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/flight_fly"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:src="@drawable/flight_fly_icon" >
+            </ImageView>
+
+            <TextView
+                android:id="@+id/endcity_tv"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="上海"
+                android:textColor="#FF363636"
+                android:textSize="22sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/endcity_code_tv"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="SHB"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:visibility="gone" >
+            </TextView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:src="@drawable/rightsmallarrow" >
+            </ImageView>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/city_choose_rl"
+        android:layout_marginLeft="@dimen/button_margin"
+        android:layout_marginRight="@dimen/button_margin"
+        android:background="@color/deep_gray" />
+
+    <RelativeLayout
+        android:id="@+id/date_choose_single_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/city_choose_rl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/button_margin"
+        android:layout_marginRight="@dimen/button_margin"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/startdate_choose_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:gravity="center"
+                android:src="@drawable/icon_date" >
+            </ImageView>
+
+            <TextView
+                android:id="@+id/startoff_date_tv"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="2014年6月23日"
+                android:textColor="#FF363636"
+                android:textSize="18sp" >
+            </TextView>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:src="@drawable/rightsmallarrow" >
+        </ImageView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/date_choose_double_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/city_choose_rl"
+        android:layout_marginLeft="@dimen/button_margin"
+        android:layout_marginRight="@dimen/button_margin"
+        android:gravity="center_vertical"
+        android:visibility="invisible" >
+
+        <LinearLayout
+            android:id="@+id/startdate_choose_ll1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:gravity="center"
+                android:src="@drawable/icon_date" >
+            </ImageView>
+
+            <TextView
+                android:id="@+id/startdate_tv"
+                android:layout_width="110dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="2014年6月23日"
+                android:textColor="#FF363636"
+                android:textSize="18sp" >
+            </TextView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/rightsmallarrow" >
+            </ImageView>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/img_vline"
+            android:layout_width="1px"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/deep_gray" />
+
+        <LinearLayout
+            android:id="@+id/enddate_choose_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/img_vline"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:src="@drawable/icon_date" >
+            </ImageView>
+
+            <TextView
+                android:id="@+id/enddate_tv"
+                android:layout_width="110dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="2014年6月23日"
+                android:textColor="#FF363636"
+                android:textSize="18sp" >
+            </TextView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/rightsmallarrow" >
+            </ImageView>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/date_choose_double_rl"
+        android:layout_marginLeft="@dimen/button_margin"
+        android:layout_marginRight="@dimen/button_margin"
+        android:background="@color/deep_gray" />
+
+    <Button
+        android:id="@+id/chongzhi_button"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_below="@id/date_choose_double_rl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/button_margin"
+        android:layout_marginRight="@dimen/button_margin"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn_3"
+        android:text="查  询"
+        android:textColor="#FFF0F0F0"
+        android:textSize="20sp" >
+    </Button>
+
+    <RelativeLayout
+        android:id="@+id/bottom_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_sate" >
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,668 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#efefef"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/text_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@drawable/titile_bg" >
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="订单填写"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" >
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/back_imgbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back" >
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/home_imgbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="#00000000"
+            android:src="@drawable/home" >
+        </ImageButton>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/text_bg"
+        android:layout_marginBottom="61dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/trainInfo_bg"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/text_bg"
+                android:padding="10dp" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/train" />
+
+                    <TextView
+                        android:id="@+id/train_num_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="G108"
+                        android:textColor="@color/blue_title_color" />
+
+                    <TextView
+                        android:id="@+id/train_type_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="高速动车"
+                        android:textColor="@color/black6"
+                        android:textSize="@dimen/booking_item_title_textsize" >
+                    </TextView>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/runtime_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="耗时：05:51"
+                    android:textColor="@color/black6"
+                    android:textSize="@dimen/booking_item_title_textsize" >
+                </TextView>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/deep_gray" />
+
+            <RelativeLayout
+                android:id="@+id/start_end_info_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="10dp" >
+
+                <LinearLayout
+                    android:id="@+id/start_Info_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/start_station_icon_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/trains_start" />
+
+                        <TextView
+                            android:id="@+id/start_station_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center"
+                            android:text="上海虹桥"
+                            android:textColor="@color/black6"
+                            android:textSize="@dimen/booking_item_content_textsize" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/start_time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="18:45"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/booking_item_title_textsize" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/start_date_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="2014-09-15"
+                        android:textColor="@color/black6"
+                        android:textSize="@dimen/booking_item_content_textsize" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/endInfo_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/startoff_time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="35sp" />
+
+                    <TextView
+                        android:id="@+id/start_port_tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/huise_txt_color"
+                        android:textSize="@dimen/booking_item_small_textsize" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lay_stop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center|bottom"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/runtime_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/thetrain" />
+
+                   <!--  <TextView
+                        android:id="@+id/tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="停靠站"
+                        android:layout_margin="10sp"
+                        android:textColor="@color/blue_title_color" />
+
+                    <ImageView
+                        android:id="@+id/iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/solid_arrow_down_blue" /> -->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/end_Info_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/end_station_icon_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/train_final" />
+
+                        <TextView
+                            android:id="@+id/end_station_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center"
+                            android:text="上海虹桥"
+                            android:textColor="@color/black6"
+                            android:textSize="@dimen/booking_item_content_textsize" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/end_time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="19:45"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/booking_item_title_textsize" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/end_date_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="2014-09-15"
+                        android:textColor="@color/black6"
+                        android:textSize="@dimen/booking_item_content_textsize" >
+                    </TextView>
+                </LinearLayout>
+            </RelativeLayout>
+            <!--  -->
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/deep_gray" />
+
+            <ListView
+                android:id="@+id/xibie_listview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+            </ListView>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/seat_grad_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="二等座"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/booking_item_content_textsize" />
+
+                <TextView
+                    android:id="@+id/ticket_price_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/seat_grad_tv"
+                    android:text="￥966"
+                    android:textColor="@color/price_yellow"
+                    android:textSize="@dimen/booking_item_title_textsize" />
+
+                <TextView
+                    android:id="@+id/remain_count_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/ticket_price_tv"
+                    android:text="余票 40张"
+                    android:textColor="@color/black6"
+                    android:textSize="@dimen/booking_item_content_textsize" />
+
+                <TextView
+                    android:id="@+id/modify_seat_tv"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_toRightOf="@id/remain_count_tv"
+                    android:gravity="center_vertical|right"
+                    android:text="修改坐席"
+                    android:textColor="@color/blue_title_color"
+                    android:textSize="@dimen/booking_item_content_textsize" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/rightsmallarrow" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/deep_gray" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="15dp"
+                android:background="@color/deep_gray" />
+
+            <RelativeLayout
+                android:id="@+id/add_passager_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/list_item_color_bg"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:padding="10dp" >
+
+                <ImageView
+                    android:id="@+id/baoxiaopingzheng_icon_iv"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/passengers_icon" />
+
+                <TextView
+                    android:id="@+id/add_passager_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/baoxiaopingzheng_icon_iv"
+                    android:text="添加乘客"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/booking_item_title_textsize" />
+
+                <ImageView
+                    android:id="@+id/baoxian_right_icon_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/rightsmallarrow" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/passenger_head_divid_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="15dp"
+                android:background="@color/deep_gray"
+                android:visibility="invisible" />
+            <!-- android:divider="@null" -->
+
+            <ListView
+                android:id="@+id/passenger_listview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+            </ListView>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/deep_gray" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="15dp"
+                android:background="@color/deep_gray" />
+
+            <RelativeLayout
+                android:id="@+id/add_contact_person_phone_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/list_item_color_bg"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:padding="10dp" >
+
+                <ImageView
+                    android:id="@+id/lianxiren_icon_iv"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/contacts_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/lianxiren_icon_iv"
+                    android:text="联系人电话"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/booking_item_title_textsize" />
+
+                <com.jike.shanglv.Common.ClearEditText
+                    android:id="@+id/contact_person_phone_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="50dp"
+                    android:background="@null"
+                    android:drawableRight="@drawable/delete_selector"
+                    android:hint="输入联系人电话"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    android:textColor="@color/huise_txt_color"
+                    android:textSize="@dimen/booking_item_content_textsize" />
+
+                <ImageButton
+                    android:id="@+id/lianxiren_icon_imgbtn"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/contacts_phone_icon" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/deep_gray" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="15dp"
+                android:background="@color/deep_gray" />
+
+            <RelativeLayout
+                android:id="@+id/baoxian_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/list_item_color_bg"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:padding="10dp" >
+
+                <ImageView
+                    android:id="@+id/baoxian_icon_iv"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/invoices_icon" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/baoxian_icon_iv"
+                    android:text="保 险"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/booking_item_title_textsize" />
+
+                <TextView
+                    android:id="@+id/baoxian_price_and_count_tv"
+                    android:layout_width="150dp"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dp"
+                    android:gravity="right|center_vertical"
+                    android:text="￥10"
+                    android:textColor="@color/price_yellow"
+                    android:textSize="@dimen/booking_item_content_textsize" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/rightsmallarrow" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/deep_gray" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="15dp"
+                android:background="@color/deep_gray" />
+
+            <RelativeLayout
+                android:id="@+id/yanzhengma_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/yzm_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="验证码"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/booking_item_title_textsize" />
+
+                <com.jike.shanglv.Common.ClearEditText
+                    android:id="@+id/yanzhengma_input_et"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/yzm_tv"
+                    android:background="@null"
+                    android:drawableRight="@drawable/delete_selector"
+                    android:hint="必填"
+                    android:maxLength="8"
+                    android:paddingLeft="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/huise_txt_color"
+                    android:textSize="@dimen/booking_item_content_textsize" />
+
+                <ImageView
+                    android:id="@+id/yanzhengma_iv"
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="70dp" />
+
+                <TextView
+                    android:id="@+id/djsx_tv"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="点击刷新"
+                    android:textColor="@color/green"
+                    android:textSize="16sp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/deep_gray" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/bottom_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/serchtype_bg"
+        android:gravity="center_vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单总额"
+                android:textColor="@color/black"
+                android:textSize="@dimen/booking_item_content_textsize" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/order_totalmoney_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="￥788"
+                android:textColor="@color/price_yellow"
+                android:textSize="20sp" >
+            </TextView>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/order_now_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/booking_immediately_button_bg" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_above="@id/bottom_rl"
+        android:background="@color/deep_gray" />
+
+</RelativeLayout>

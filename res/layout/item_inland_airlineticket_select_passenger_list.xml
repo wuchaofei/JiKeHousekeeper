@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/list_item_color_bg" 
+    android:clickable="true"
+    android:paddingBottom="10dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="10dp" >
+    
+    <ImageButton
+        android:id="@+id/select_imgbtn"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/checkmark_icon" />
+
+    <RelativeLayout
+        android:id="@+id/passenger_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true" >
+
+        <TextView
+            android:id="@+id/passengerName_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="张海洋"
+            android:textColor="@color/black_txt_color"
+            android:textSize="@dimen/booking_item_content_textsize" >
+        </TextView>
+        
+         <TextView
+            android:id="@+id/passengerType_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/passengerName_tv"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="5dp"
+            android:text="成人"
+            android:textColor="@color/black6"
+            android:textSize="@dimen/booking_item_content_textsize" />
+        
+        <TextView
+            android:id="@+id/identificationType_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/passengerName_tv"
+            android:layout_marginTop="2dp"
+            android:text="身份证"
+            android:textColor="@color/black6"
+            android:textSize="@dimen/booking_item_small_textsize" />
+
+        <TextView
+            android:id="@+id/identificationNum_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/passengerName_tv"
+            android:layout_toRightOf="@id/identificationType_tv"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="3dp"
+            android:text="13567891234"
+            android:textColor="@color/black6"
+            android:textSize="@dimen/booking_item_small_textsize" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/edit_imgbtn"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/modify_icon" />
+
+</LinearLayout>

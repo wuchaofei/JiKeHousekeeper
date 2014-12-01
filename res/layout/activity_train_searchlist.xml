@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFFFF" >
+
+    <RelativeLayout
+        android:id="@+id/text_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@drawable/titile_bg" >
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="火车票列表"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" >
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/back_imgbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back" >
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/total_train_count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="#00000000"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            >
+        </TextView>
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/bottom_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/serchtype_bg_reverse" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/bytraintype_LL"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/sort_type_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#F5F5F5"
+                    android:text="车次类型"
+                    android:textColor="@color/text_blue_select"
+                    android:textSize="15sp" />
+                <ImageView
+                    android:id="@+id/sort_type_iv"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="5dp"
+		            android:background="@drawable/sort_arrow_up" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bytime_ll"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal" >
+                <TextView
+                    android:id="@+id/sort_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#F5F5F5"
+                    android:text="发车时间"
+                    android:textColor="@color/text_blue_select"
+                    android:textSize="15sp" />
+                <ImageView
+                    android:id="@+id/sort_time_iv"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="5dp"
+		            android:background="@drawable/sort_arrow_up" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+   <ListView
+       android:id="@+id/listview"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:layout_above="@+id/bottom_bg"
+       android:layout_below="@id/text_bg"
+       android:layout_alignParentLeft="true" >
+   </ListView>
+
+</RelativeLayout>

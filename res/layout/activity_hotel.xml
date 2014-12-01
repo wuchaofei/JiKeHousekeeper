@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/main"
+    android:background="#efefef"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/top_title_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/titile_bg" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="酒 店"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" >
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/back_imgbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back" >
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/home_imgbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="#00000000"
+            android:src="@drawable/home" >
+        </ImageButton>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="15dp"
+        android:background="@color/deep_gray" />
+
+    <LinearLayout
+        android:id="@+id/content_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/button_margin" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" >
+
+            <ImageView
+                android:id="@+id/hotel_city_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/hotel_city" />
+
+            <TextView
+                android:id="@+id/city_label_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:gravity="center"
+                android:text="城市"
+                android:textColor="@color/black6"
+                android:textSize="20sp" >
+            </TextView>
+
+            <LinearLayout
+                android:id="@+id/city_ll"
+                android:layout_width="195dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/city_label_tv"
+                android:background="@drawable/list_item_color_bg"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/city_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="35dp"
+                    android:gravity="center"
+                    android:text="上海"
+                    android:textColor="@color/black_txt_color"
+                    android:textSize="19sp" >
+                </TextView>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/right_arrow_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="80dp"
+                android:background="@drawable/rightsmallarrow" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="75dp"
+                android:background="@color/deep_gray" />
+
+            <LinearLayout
+                android:id="@+id/my_position_ll"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/list_item_color_bg"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/hotel_wz_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/hotel_wz" />
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="我的位置"
+                    android:textColor="@color/black6"
+                    android:textSize="14sp" >
+                </TextView>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/deep_gray" />
+
+        <RelativeLayout
+            android:background="@drawable/list_item_color_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" >
+
+            <ImageView
+                android:id="@+id/hotel_ruzhu_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/hotel_date_rz" />
+
+            <TextView
+                android:id="@+id/ruzhu_label_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:gravity="center"
+                android:text="入住"
+                android:textColor="@color/black6"
+                android:textSize="20sp" >
+            </TextView>
+
+            <LinearLayout
+                android:id="@+id/ruzhu_date_ll"
+                android:layout_width="220dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/ruzhu_label_tv"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/ruzhu_date_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="35dp"
+                    android:gravity="center"
+                    android:text="2014-08-28"
+                    android:textColor="@color/black_txt_color"
+                    android:textSize="20sp" >
+                </TextView>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/rightsmallarrow" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/deep_gray" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" >
+
+            <ImageView
+                android:id="@+id/hotel_lidian_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/hotel_date_ld" />
+
+            <TextView
+                android:id="@+id/lidian_label_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:gravity="center"
+                android:text="离店"
+                android:textColor="@color/black6"
+                android:textSize="20sp" >
+            </TextView>
+
+            <LinearLayout
+                android:id="@+id/lidian_date_ll"
+                android:layout_width="220dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/lidian_label_tv"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/lidian_date_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="35dp"
+                    android:gravity="center"
+                    android:text="2014-08-29"
+                    android:textColor="@color/black_txt_color"
+                    android:textSize="20sp" >
+                </TextView>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/rightsmallarrow" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/deep_gray" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" >
+
+            <ImageView
+                android:id="@+id/hotel_guanjianzi_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/hotel_gjz" />
+
+            <TextView
+                android:id="@+id/gjz_label_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:gravity="center"
+                android:text="关键字"
+                android:textColor="@color/black6"
+                android:textSize="20sp" >
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="220dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/gjz_label_tv"
+                android:gravity="center_vertical" >
+
+               
+                <com.jike.shanglv.Common.ClearEditText
+                     android:id="@+id/keywords_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="位置/品牌/酒店名"
+                    android:textColor="@color/black_txt_color"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    android:drawableRight="@drawable/delete_selector"
+                    android:singleLine="true"
+                   />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/rightsmallarrow" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/deep_gray" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/hotel_xing" />
+
+            <TextView
+                android:id="@+id/xj_label_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:gravity="center"
+                android:text="星级"
+                android:textColor="@color/black6"
+                android:textSize="20sp" >
+            </TextView>
+
+            <LinearLayout
+                android:id="@+id/xingji_ll"
+                android:layout_width="220dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/xj_label_tv"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/xingji_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="35dp"
+                    android:gravity="center"
+                    android:text="不限"
+                    android:textColor="@color/black_txt_color"
+                    android:textSize="20sp" >
+                </TextView>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/rightsmallarrow" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/deep_gray" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/hotel_money" />
+
+            <TextView
+                android:id="@+id/jiage_label_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:gravity="center"
+                android:text="价格"
+                android:textColor="@color/black6"
+                android:textSize="20sp" >
+            </TextView>
+
+            <LinearLayout
+                android:id="@+id/jiage_ll"
+                android:layout_width="220dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/jiage_label_tv"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/jiage_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="35dp"
+                    android:gravity="center"
+                    android:text="不限"
+                    android:textColor="@color/black_txt_color"
+                    android:textSize="20sp" >
+                </TextView>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/rightsmallarrow" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/deep_gray" />
+
+    <Button
+        android:id="@+id/chongzhi_button"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_below="@id/date_choose_single_rl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/button_margin"
+        android:layout_marginRight="@dimen/button_margin"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn_3"
+        android:text="查  询"
+        android:textColor="#FFF0F0F0"
+        android:textSize="20sp" >
+    </Button>
+    
+    <TextView 
+        android:id="@+id/test_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

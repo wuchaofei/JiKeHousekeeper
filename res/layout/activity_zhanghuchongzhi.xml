@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#efefef"
+    android:orientation="vertical"
+    tools:context=".ActivityHotel" >
+
+    <RelativeLayout
+        android:id="@+id/top_title_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/titile_bg" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="账户充值"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" >
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/back_imgbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back"
+            android:contentDescription="返回" >
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/home_imgbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="#00000000"
+            android:contentDescription="主页"
+            android:src="@drawable/home" >
+        </ImageButton>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="15dp"
+        android:background="@color/deep_gray" />
+
+   <RelativeLayout
+        android:id="@+id/choose_mianzhi_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/list_item_color_bg" >
+
+        <TextView
+            android:id="@+id/dangqian_tv"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:gravity="left"
+            android:text="当前余额"
+            android:textColor="@color/black6"
+            android:textSize="20sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/dangqianyue_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/dangqian_tv"
+            android:background="@null"
+            android:gravity="center_vertical|left"
+            android:maxLength="11"
+            android:paddingLeft="10dp"
+            android:text="￥14.5"
+            android:textColor="@color/price_yellow"
+            android:textSize="20sp" >
+        </TextView>
+
+        <ImageView
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/rightsmallarrow"
+            android:contentDescription="图标" />
+        
+       <TextView
+           android:visibility="invisible"
+            android:id="@+id/chongzhijilu_tv"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:gravity="center_vertical|right"
+            android:text="充值记录"
+            android:textColor="@color/blue_title_color"
+            android:textSize="20sp" >
+        </TextView>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="15dp"
+        android:background="@color/deep_gray" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/list_item_color_bg" >
+
+        <TextView
+            android:id="@+id/chongzhijine_tv"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:gravity="left"
+            android:text="充值金额"
+            android:textColor="@color/black6"
+            android:textSize="20sp" >
+        </TextView>
+
+        <com.jike.shanglv.Common.ClearEditText
+            android:id="@+id/chongzhijine_et"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/chongzhijine_tv"
+            android:background="@null"
+            android:drawableRight="@drawable/delete_selector"
+            android:gravity="center_vertical"
+            android:hint="请输入充值金额"
+            android:inputType="numberDecimal"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black_txt_color"
+            android:textSize="19sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/deep_gray" />
+
+    <Button
+        android:id="@+id/chongzhi_button"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginLeft="@dimen/button_margin"
+        android:layout_marginRight="@dimen/button_margin"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn_3"
+        android:text="充  值"
+        android:textColor="#FFF0F0F0"
+        android:textSize="20sp" >
+    </Button>
+
+    <TextView
+        android:id="@+id/test_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
